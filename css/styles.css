@@ -660,27 +660,26 @@ a:not(.logo):hover svg { transform: translateX(4px); }
 .step-name { transition: transform .6s var(--ease), color .35s ease; }
 .step:hover .step-name { transform: translateX(16px); }
 
-/* Scroll-driven: reveal on enter, hero parallax, reading progress */
+/* Reading progress and hero parallax: driven by js/main.js in every browser
+   (--read, --hero-p). Safari's native scroll() timelines jump backwards for a
+   few frames each time a new swipe starts, which made the top bar flicker. */
+.progress span { transform: scaleX(var(--read, 0)); }
+.leaf1 { translate: 0 calc(var(--hero-p, 0) * -40px); }
+.leaf2 { translate: 0 calc(var(--hero-p, 0) * -96px); }
+.leaf3 { translate: 0 calc(var(--hero-p, 0) * -24px); }
+
+/* Section reveals: native view() timelines where supported */
 @supports (animation-timeline: view()) {
   .reveal { animation: reveal linear both; animation-timeline: view(); animation-range: entry 0% entry 75%; }
-  .leaf1 { animation: leafIn 1.4s var(--ease) .1s both, par1 linear both; animation-timeline: auto, scroll(); animation-range: normal, 0 900px; }
-  .leaf2 { animation: leafIn 1.4s var(--ease) .25s both, par2 linear both; animation-timeline: auto, scroll(); animation-range: normal, 0 900px; }
-  .leaf3 { animation: leafIn 1.4s var(--ease) .4s both, par3 linear both; animation-timeline: auto, scroll(); animation-range: normal, 0 900px; }
-  .progress span { animation: fill linear both; animation-timeline: scroll(root); }
 }
 
-/* Fallback (set by js/main.js): same motion, driven by IntersectionObserver
-   (.is-in) and a throttled scroll listener (--hero-p, --read). */
+/* Reveal fallback (js/main.js adds .no-sdt): IntersectionObserver adds .is-in */
 .no-sdt .reveal { opacity: 0; translate: 0 40px; }
 .no-sdt .reveal.is-in {
   opacity: 1;
   translate: 0 0;
   transition: opacity .9s var(--ease), translate 1s var(--ease), transform .6s var(--ease), background-color .35s ease, color .4s ease, border-color .35s ease;
 }
-.no-sdt .leaf1 { translate: 0 calc(var(--hero-p, 0) * -40px); }
-.no-sdt .leaf2 { translate: 0 calc(var(--hero-p, 0) * -96px); }
-.no-sdt .leaf3 { translate: 0 calc(var(--hero-p, 0) * -24px); }
-.no-sdt .progress span { transform: scaleX(var(--read, 0)); }
 
 @keyframes leafIn { from { opacity: 0; transform: translateY(64px) rotate(-3deg); } to { opacity: 1; transform: none; } }
 @keyframes rise { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: none; } }
@@ -688,10 +687,6 @@ a:not(.logo):hover svg { transform: translateX(4px); }
 @keyframes sway { from { transform: rotate(-1.4deg); } to { transform: rotate(1.4deg); } }
 @keyframes breathe { 0%, 100% { opacity: .6; transform: scale(.94); } 50% { opacity: 1; transform: scale(1.04); } }
 @keyframes orbit { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
-@keyframes par1 { to { translate: 0 -40px; } }
-@keyframes par2 { to { translate: 0 -96px; } }
-@keyframes par3 { to { translate: 0 -24px; } }
-@keyframes fill { to { transform: scaleX(1); } }
 
 /* Reduced motion: everything off */
 @media (prefers-reduced-motion: reduce) {

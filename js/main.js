@@ -83,8 +83,9 @@
   }
   setActive('top');
 
-  /* ---------- 4. Scroll-motion fallback ---------- */
-  // Chromium and Safari 26+ run the native CSS version; others get this.
+  /* ---------- 4. Scroll motion ---------- */
+  // Section reveals: Chromium and Safari 26+ use native CSS; others get the
+  // IntersectionObserver fallback below.
   var nativeScrollMotion = window.CSS && CSS.supports && CSS.supports('animation-timeline: view()');
 
   if (!nativeScrollMotion && !reduceMotion) {
@@ -104,25 +105,28 @@
     } else {
       targets.forEach(function (el) { el.classList.add('is-in'); });
     }
-
-    var ticking = false;
-    var update = function () {
-      ticking = false;
-      var y = window.scrollY || window.pageYOffset || 0;
-      var max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-      root.style.setProperty('--hero-p', Math.min(1, y / 900).toFixed(4));
-      root.style.setProperty('--read', Math.min(1, y / max).toFixed(4));
-    };
-    var onScroll = function () {
-      if (!ticking) {
-        ticking = true;
-        window.requestAnimationFrame(update);
-      }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll, { passive: true });
-    update();
   }
+
+  // Reading progress and hero parallax run from here in every browser:
+  // Safari's native scroll() timelines jump backwards whenever a new swipe
+  // starts, which made the progress line under the top bar flicker.
+  var ticking = false;
+  var update = function () {
+    ticking = false;
+    var y = Math.max(0, window.scrollY || window.pageYOffset || 0);
+    var max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    if (!reduceMotion) root.style.setProperty('--hero-p', Math.min(1, y / 900).toFixed(4));
+    root.style.setProperty('--read', Math.min(1, y / max).toFixed(4));
+  };
+  var onScroll = function () {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
 
   /* ---------- 5. Waitlist (Buttondown) ---------- */
   // The form posts to Buttondown in a new tab (their docs require a real form
