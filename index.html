@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fernlight — AI apps, grown in the light</title>
+  <meta name="description" content="Fernlight is an independent studio building apps and services with AI at their roots — modern, stylish software for the modern age.">
+  <link rel="canonical" href="https://fernlightapps.com/">
+
+  <!-- Apply the saved or system theme before the page paints (no flash) -->
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem('fernlight-theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0A0C0A" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F4F6F1" media="(prefers-color-scheme: light)">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fernlight">
+  <meta property="og:title" content="Fernlight — AI apps, grown in the light">
+  <meta property="og:description" content="An independent studio building apps and services with AI at their roots — modern, stylish software for the modern age.">
+  <meta property="og:url" content="https://fernlightapps.com/">
+  <meta property="og:image" content="https://fernlightapps.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Fernlight logo and the line “Rooted in craft. Grown with AI.” beside a green leaf with a fern.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fernlight — AI apps, grown in the light">
+  <meta name="twitter:description" content="An independent studio building apps and services with AI at their roots.">
+  <meta name="twitter:image" content="https://fernlightapps.com/assets/og-image.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400&display=swap">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Top bar ===== -->
+  <div class="topbar">
+    <div class="ruler" aria-hidden="true"></div>
+    <header class="header wrap">
+      <a href="#top" class="logo" aria-label="Fernlight, back to top">
+        <svg viewBox="-80 -300 160 310" aria-hidden="true">
+          <g class="logo-leaves" transform="rotate(10)">
+            <path d="M0 10 L0 -280" stroke-width="10" stroke-linecap="round"/>
+            <g stroke="none">
+              <ellipse cx="34" cy="0" rx="34" ry="12" transform="translate(0 -30) rotate(-30)"/><ellipse cx="34" cy="0" rx="34" ry="12" transform="translate(0 -30) rotate(-150)"/>
+              <ellipse cx="29" cy="0" rx="29" ry="11" transform="translate(0 -80) rotate(-30)"/><ellipse cx="29" cy="0" rx="29" ry="11" transform="translate(0 -80) rotate(-150)"/>
+              <ellipse cx="23" cy="0" rx="23" ry="9" transform="translate(0 -130) rotate(-30)"/><ellipse cx="23" cy="0" rx="23" ry="9" transform="translate(0 -130) rotate(-150)"/>
+              <ellipse cx="16" cy="0" rx="16" ry="7" transform="translate(0 -180) rotate(-30)"/><ellipse cx="16" cy="0" rx="16" ry="7" transform="translate(0 -180) rotate(-150)"/>
+            </g>
+          </g>
+          <circle class="logo-sun" cx="48" cy="-270" r="22"/>
+        </svg>
+        <span aria-hidden="true">Fernlight</span>
+      </a>
+
+      <nav class="nav" aria-label="Sections">
+        <a class="navlink" href="#top">Studio</a>
+        <a class="navlink" href="#make">What we make</a>
+        <a class="navlink" href="#grow">Process</a>
+        <a class="navlink" href="#note">Note</a>
+      </nav>
+
+      <div class="actions">
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Switch to light mode" title="Switch to light mode">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        </button>
+        <a class="btn btn-outline" href="mailto:hello@fernlightapps.com">Contact</a>
+        <a class="btn btn-solid" href="#waitlist">Join the waitlist</a>
+      </div>
+    </header>
+    <div class="progress" aria-hidden="true"><span></span></div>
+  </div>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section id="top" aria-labelledby="hero-title">
+      <div class="hero-leaves wrap" aria-hidden="true">
+        <div class="leaf leaf1">
+          <span class="leaf-label mono">FRN_01</span>
+          <div class="leaf-text serif">Apps grown<br>in the light</div>
+        </div>
+        <div class="leaf leaf2">
+          <div class="glow"></div>
+          <span class="leaf-label mono">LGHT_02</span>
+          <svg class="fern" viewBox="-90 -300 180 310">
+            <g fill="#0A0C0A" transform="rotate(14) translate(-6 0)">
+              <path d="M0 14 L0 -290" stroke="#0A0C0A" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="35" cy="0" rx="35" ry="9" transform="translate(0 -20) rotate(-30)"/><ellipse cx="35" cy="0" rx="35" ry="9" transform="translate(0 -20) rotate(-150)"/>
+              <ellipse cx="34" cy="0" rx="34" ry="9" transform="translate(0 -44) rotate(-30)"/><ellipse cx="34" cy="0" rx="34" ry="9" transform="translate(0 -44) rotate(-150)"/>
+              <ellipse cx="32" cy="0" rx="32" ry="8.5" transform="translate(0 -68) rotate(-30)"/><ellipse cx="32" cy="0" rx="32" ry="8.5" transform="translate(0 -68) rotate(-150)"/>
+              <ellipse cx="30" cy="0" rx="30" ry="8" transform="translate(0 -92) rotate(-30)"/><ellipse cx="30" cy="0" rx="30" ry="8" transform="translate(0 -92) rotate(-150)"/>
+              <ellipse cx="27.5" cy="0" rx="27.5" ry="7.5" transform="translate(0 -116) rotate(-30)"/><ellipse cx="27.5" cy="0" rx="27.5" ry="7.5" transform="translate(0 -116) rotate(-150)"/>
+              <ellipse cx="25" cy="0" rx="25" ry="7" transform="translate(0 -140) rotate(-30)"/><ellipse cx="25" cy="0" rx="25" ry="7" transform="translate(0 -140) rotate(-150)"/>
+              <ellipse cx="22" cy="0" rx="22" ry="6" transform="translate(0 -164) rotate(-30)"/><ellipse cx="22" cy="0" rx="22" ry="6" transform="translate(0 -164) rotate(-150)"/>
+              <ellipse cx="19" cy="0" rx="19" ry="5.5" transform="translate(0 -188) rotate(-30)"/><ellipse cx="19" cy="0" rx="19" ry="5.5" transform="translate(0 -188) rotate(-150)"/>
+              <ellipse cx="16" cy="0" rx="16" ry="4.5" transform="translate(0 -212) rotate(-30)"/><ellipse cx="16" cy="0" rx="16" ry="4.5" transform="translate(0 -212) rotate(-150)"/>
+              <ellipse cx="12.5" cy="0" rx="12.5" ry="4" transform="translate(0 -236) rotate(-30)"/><ellipse cx="12.5" cy="0" rx="12.5" ry="4" transform="translate(0 -236) rotate(-150)"/>
+              <ellipse cx="9" cy="0" rx="9" ry="3" transform="translate(0 -258) rotate(-30)"/><ellipse cx="9" cy="0" rx="9" ry="3" transform="translate(0 -258) rotate(-150)"/>
+              <ellipse cx="6" cy="0" rx="6" ry="2.5" transform="translate(0 -278) rotate(-30)"/><ellipse cx="6" cy="0" rx="6" ry="2.5" transform="translate(0 -278) rotate(-150)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="leaf leaf3">
+          <span class="leaf-label mono">FRN_03</span>
+          <div class="leaf-text serif">Made with<br>intelligence</div>
+        </div>
+      </div>
+
+      <div class="hero-copy wrap">
+        <h1 id="hero-title" class="hero-title rise">Rooted in craft.<br>Grown with AI.</h1>
+        <p class="hero-lede rise d2">
+          <span class="indent" aria-hidden="true"></span>Fernlight is an independent studio building apps and services with AI at their roots — modern, stylish software for the modern age.
+          <span class="muted">Small team, careful design, and technology that feels as natural as sunlight through leaves.</span>
+        </p>
+      </div>
+      <div class="ruler" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== What we make ===== -->
+    <section id="make" class="section wrap" aria-labelledby="make-title">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow mono">[ WHAT WE MAKE ]</p>
+          <h2 id="make-title" class="h2">Everything we build<br><span class="muted">starts small and grows.</span></h2>
+        </div>
+        <p class="section-intro">Apps people enjoy opening, and services other builders can rely on — each one designed, built and tended in-house.</p>
+      </div>
+
+      <div class="bento">
+        <article class="tile tile-rings reveal">
+          <div class="orbit" aria-hidden="true">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+            <div class="sun-glow"></div>
+            <div class="sun-core"></div>
+            <div class="node node-1"></div>
+            <div class="node node-2"></div>
+            <div class="node node-3"></div>
+            <div class="node-dot"></div>
+          </div>
+          <div class="tile-copy">
+            <p class="tile-num mono">[01]</p>
+            <h3>AI-native apps</h3>
+            <p>Mobile and web apps with intelligence designed in from the first sketch — not bolted on afterwards.</p>
+          </div>
+        </article>
+
+        <article class="tile tile-services reveal">
+          <ul class="chips mono" aria-label="Example capabilities">
+            <li class="chip">summarise()</li>
+            <li class="chip">classify()</li>
+            <li class="chip chip-on">generate()</li>
+            <li class="chip chip-more">+ more</li>
+          </ul>
+          <div>
+            <p class="tile-num mono">[02]</p>
+            <h3>Services &amp; APIs</h3>
+            <p>Focused AI tools other teams can plug straight into their own products.</p>
+          </div>
+        </article>
+
+        <article class="tile tile-type reveal">
+          <h3 class="big-type">Small team.<br><span class="serif">Big care.</span></h3>
+          <p>Independent by choice, so every decision serves the people using what we make.</p>
+        </article>
+
+        <article class="tile tile-accent reveal">
+          <div class="tint tint-a" aria-hidden="true"></div>
+          <div class="tint tint-b" aria-hidden="true"></div>
+          <a class="square-link" href="#grow" aria-label="See how we work">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <div class="tile-copy">
+            <h3>Design, first.</h3>
+            <p>Calm, stylish interfaces where every pixel earns its place.</p>
+          </div>
+        </article>
+
+        <article class="tile tile-app reveal">
+          <div class="app-stage" aria-hidden="true">
+            <div class="app-card">
+              <div class="app-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A0C0A" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+              </div>
+              <div class="app-text">
+                <div class="app-title">Your summary is ready</div>
+                <div class="app-meta mono">[APP NAME] · just now</div>
+              </div>
+              <svg class="app-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg>
+            </div>
+          </div>
+          <div class="app-body">
+            <h3>Quietly helpful</h3>
+            <p>AI that does the work in the background and only speaks up when it matters.</p>
+          </div>
+        </article>
+
+        <article class="tile tile-soon reveal">
+          <p class="soon-label mono"><span aria-hidden="true">● </span>IN THE GREENHOUSE</p>
+          <h3>[FIRST APP NAME]</h3>
+          <p>Our first release is growing now. Join the waitlist to be the first to try it.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== How it grows ===== -->
+    <section id="grow" class="grow" aria-labelledby="grow-title">
+      <div class="grow-top wrap">
+        <h2 id="grow-title" class="eyebrow mono reveal">[ HOW IT GROWS ]</h2>
+      </div>
+      <div class="grow-row wrap">
+        <div class="grow-aside">
+          <p>Every Fernlight product follows the same simple cycle — from a small idea to something that thrives in daylight.</p>
+          <a class="btn btn-solid" href="#waitlist">Join the waitlist
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="13" rx="5" ry="7"/><path d="M12 6v14"/></svg></span>
+            <span class="step-name">Seed</span>
+          </li>
+          <li class="step reveal">
+            <span class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21V10"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 10C12 6 9.5 4 6 4c0 3.5 2.5 6 6 6z"/></svg></span>
+            <span class="step-name">Sprout</span>
+          </li>
+          <li class="step step-on reveal">
+            <span class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span>
+            <span class="step-name">Light</span>
+            <span class="step-tag serif">we ship</span>
+          </li>
+          <li class="step reveal">
+            <span class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v4h-4"/></svg></span>
+            <span class="step-name">Tend</span>
+          </li>
+        </ol>
+      </div>
+      <div class="grow-notes wrap">
+        <div class="grow-note reveal">
+          <p class="tile-num mono">[01]</p>
+          <p><span class="strong">Seed a real problem.</span> We start with something people genuinely struggle with every day.</p>
+        </div>
+        <div class="grow-note reveal">
+          <p class="tile-num mono">[02]</p>
+          <p><span class="strong">Sprout fast with AI.</span> Prototypes in days, shaped by design and honest feedback.</p>
+        </div>
+        <div class="grow-note reveal">
+          <p class="tile-num mono">[03]</p>
+          <p><span class="strong">Bring it into the light.</span> We launch when it feels effortless — not a moment before.</p>
+        </div>
+        <div class="grow-note reveal">
+          <p class="tile-num mono">[04]</p>
+          <p><span class="strong">Tend it carefully.</span> Every release keeps growing with the people who use it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Note from the studio ===== -->
+    <section id="note" class="note wrap" aria-labelledby="note-title">
+      <!-- Replace this box with: <img class="note-photo" src="assets/founder.jpg" alt="[YOUR NAME], founder of Fernlight"> -->
+      <div class="note-photo mono reveal" role="img" aria-label="Founder photo placeholder">[FOUNDER PHOTO]</div>
+      <div class="note-body reveal">
+        <div>
+          <h2 id="note-title" class="eyebrow mono">A NOTE FROM THE STUDIO</h2>
+          <blockquote class="quote">
+            <p><span class="indent" aria-hidden="true"></span>“Good technology should feel like light through leaves — <span class="dim">warm, effortless, and simply there when you need it.”</span></p>
+          </blockquote>
+        </div>
+        <div class="note-foot">
+          <div>
+            <div class="note-name">[YOUR NAME]</div>
+            <div class="note-role">Founder, Fernlight</div>
+          </div>
+          <div class="note-site serif">fernlightapps.com</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Waitlist ===== -->
+    <section id="waitlist" class="cta" aria-labelledby="waitlist-title">
+      <div class="cta-outline" aria-hidden="true"></div>
+      <div class="cta-leaf" aria-hidden="true"></div>
+      <div class="cta-inner wrap">
+        <p class="eyebrow mono reveal">[ JOIN THE WAITLIST ]</p>
+        <h2 id="waitlist-title" class="cta-title reveal">Let’s grow something <span class="serif">bright.</span></h2>
+        <!-- The waitlist isn't connected yet. See README.md → "Waitlist form". -->
+        <form class="form reveal" data-waitlist novalidate>
+          <label class="visually-hidden" for="email">Email address</label>
+          <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <button class="submit" type="submit">Notify me</button>
+        </form>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        <p class="form-note reveal">No spam — just a note when our first app is ready.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-inner wrap">
+      <div>
+        <div class="wordmark" aria-hidden="true">Fernlight</div>
+        <p class="copyright mono">© <span data-year>2026</span> FERNLIGHT · INDEPENDENT AI STUDIO</p>
+      </div>
+      <div class="footer-cols">
+        <nav class="footer-col" aria-labelledby="footer-studio">
+          <h2 id="footer-studio" class="mono">STUDIO</h2>
+          <a href="#make">What we make</a>
+          <a href="#grow">Process</a>
+          <a href="#note">Note</a>
+        </nav>
+        <div class="footer-col">
+          <h2 class="mono">CONTACT</h2>
+          <a href="mailto:hello@fernlightapps.com">hello@fernlightapps.com</a>
+          <a href="https://fernlightapps.com">fernlightapps.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="ruler" aria-hidden="true"></div>
+  </footer>
+</body>
+</html>

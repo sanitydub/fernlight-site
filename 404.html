@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — Fernlight</title>
+  <meta name="robots" content="noindex">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem('fernlight-theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <!-- Absolute paths: this page can be served at any missing URL -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="ruler" aria-hidden="true"></div>
+    <header class="header wrap">
+      <a href="/" class="logo" aria-label="Fernlight home">
+        <svg viewBox="-80 -300 160 310" aria-hidden="true">
+          <g class="logo-leaves" transform="rotate(10)">
+            <path d="M0 10 L0 -280" stroke-width="10" stroke-linecap="round"/>
+            <g stroke="none">
+              <ellipse cx="34" cy="0" rx="34" ry="12" transform="translate(0 -30) rotate(-30)"/><ellipse cx="34" cy="0" rx="34" ry="12" transform="translate(0 -30) rotate(-150)"/>
+              <ellipse cx="29" cy="0" rx="29" ry="11" transform="translate(0 -80) rotate(-30)"/><ellipse cx="29" cy="0" rx="29" ry="11" transform="translate(0 -80) rotate(-150)"/>
+              <ellipse cx="23" cy="0" rx="23" ry="9" transform="translate(0 -130) rotate(-30)"/><ellipse cx="23" cy="0" rx="23" ry="9" transform="translate(0 -130) rotate(-150)"/>
+              <ellipse cx="16" cy="0" rx="16" ry="7" transform="translate(0 -180) rotate(-30)"/><ellipse cx="16" cy="0" rx="16" ry="7" transform="translate(0 -180) rotate(-150)"/>
+            </g>
+          </g>
+          <circle class="logo-sun" cx="48" cy="-270" r="22"/>
+        </svg>
+        <span aria-hidden="true">Fernlight</span>
+      </a>
+    </header>
+    <div class="progress" aria-hidden="true"></div>
+  </div>
+
+  <main class="lost wrap">
+    <p class="eyebrow mono">[ 404 ]</p>
+    <h1>This path hasn’t<br><span class="serif">grown yet.</span></h1>
+    <p>The page you’re looking for doesn’t exist or has moved.</p>
+    <a class="btn btn-solid" href="/">Back to Fernlight
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+  </main>
+
+  <div class="ruler" aria-hidden="true"></div>
+</body>
+</html>

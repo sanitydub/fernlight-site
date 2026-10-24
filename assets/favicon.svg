@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-110 -310 220 330">
+  <style>
+    .leaves { fill: #0A0C0A; stroke: #0A0C0A; }
+    @media (prefers-color-scheme: dark) { .leaves { fill: #F2F4EF; stroke: #F2F4EF; } }
+  </style>
+  <g class="leaves" transform="rotate(10)">
+    <path d="M0 10 L0 -280" stroke-width="14" stroke-linecap="round"/>
+    <g stroke="none">
+      <ellipse cx="34" cy="0" rx="34" ry="12" transform="translate(0 -30) rotate(-30)"/><ellipse cx="34" cy="0" rx="34" ry="12" transform="translate(0 -30) rotate(-150)"/>
+      <ellipse cx="29" cy="0" rx="29" ry="11" transform="translate(0 -80) rotate(-30)"/><ellipse cx="29" cy="0" rx="29" ry="11" transform="translate(0 -80) rotate(-150)"/>
+      <ellipse cx="23" cy="0" rx="23" ry="9" transform="translate(0 -130) rotate(-30)"/><ellipse cx="23" cy="0" rx="23" ry="9" transform="translate(0 -130) rotate(-150)"/>
+      <ellipse cx="16" cy="0" rx="16" ry="7" transform="translate(0 -180) rotate(-30)"/><ellipse cx="16" cy="0" rx="16" ry="7" transform="translate(0 -180) rotate(-150)"/>
+    </g>
+  </g>
+  <circle cx="48" cy="-270" r="26" fill="#8FD45E"/>
+</svg>
