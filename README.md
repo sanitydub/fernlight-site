@@ -1,4 +1,4 @@
-# Fernlight — fernlightapps.com
+# Fernlight (fernlightapps.com)
 
 The landing page for Fernlight, an independent studio building AI-powered apps and services.
 It's a plain static site (HTML, CSS and a little JavaScript) hosted free on GitHub Pages.

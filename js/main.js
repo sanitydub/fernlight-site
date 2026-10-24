@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Fernlight — behaviour
+   Fernlight: behaviour
    1. Light/dark toggle (remembers the visitor's choice)
    2. Keeps section links clear of the sticky top bar
    3. Highlights the current section in the nav
@@ -136,7 +136,7 @@
     form.addEventListener('submit', function (e) {
       if (!connected) {
         e.preventDefault();
-        status.textContent = 'Thanks for your interest! The waitlist opens soon — we’re still setting it up, so nothing was sent. Please check back shortly.';
+        status.textContent = 'The waitlist isn’t open yet, so nothing was sent. Please check back soon.';
         return;
       }
       if (email && !email.checkValidity()) {
@@ -146,7 +146,7 @@
         return;
       }
       // Let the browser submit, then confirm on this page
-      status.textContent = 'Almost there! A Buttondown tab has opened — and you’ll get an email to confirm your spot. Please check your inbox.';
+      status.textContent = 'Almost done. Buttondown opened in a new tab and sent you an email. Click the link in it to confirm your spot.';
       setTimeout(function () { form.reset(); }, 0);
     });
   }
