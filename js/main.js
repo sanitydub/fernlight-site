@@ -124,13 +124,30 @@
     update();
   }
 
-  /* ---------- 5. Waitlist (not connected yet) ---------- */
+  /* ---------- 5. Waitlist (Buttondown) ---------- */
+  // The form posts to Buttondown in a new tab (their docs require a real form
+  // submit, so they can show a CAPTCHA or error page if needed).
   var form = document.querySelector('[data-waitlist]');
   var status = document.querySelector('[data-form-status]');
   if (form && status) {
+    var email = form.querySelector('input[type="email"]');
+    var connected = form.getAttribute('action').indexOf('[BUTTONDOWN') === -1;
+
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      status.textContent = 'Thanks for your interest! The waitlist opens soon — we’re still setting it up, so nothing was sent. Please check back shortly.';
+      if (!connected) {
+        e.preventDefault();
+        status.textContent = 'Thanks for your interest! The waitlist opens soon — we’re still setting it up, so nothing was sent. Please check back shortly.';
+        return;
+      }
+      if (email && !email.checkValidity()) {
+        e.preventDefault();
+        status.textContent = 'Please enter a valid email address, like you@example.com.';
+        email.focus();
+        return;
+      }
+      // Let the browser submit, then confirm on this page
+      status.textContent = 'Almost there! A Buttondown tab has opened — and you’ll get an email to confirm your spot. Please check your inbox.';
+      setTimeout(function () { form.reset(); }, 0);
     });
   }
 

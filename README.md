@@ -42,9 +42,13 @@ Search `index.html` for these and replace them:
 
 ## Waitlist form
 
-GitHub Pages can't store form submissions, so the form isn't connected yet.
-For now it shows a "coming soon" message when someone submits it.
-Connecting a form service needs a small change in `index.html` (the form's `action`) and `js/main.js` (section 5).
+GitHub Pages can't store form submissions, so signups go to [Buttondown](https://buttondown.com).
+You'll see and export subscribers in your Buttondown dashboard, and can email them from there when you launch.
+
+- The form's `action` in `index.html` ends with your Buttondown username. If you change usernames, update it there.
+- Submitting opens Buttondown's confirmation in a new tab (Buttondown needs this to show a CAPTCHA if required), and the page shows a "check your inbox" message.
+- If the `action` still contains `[BUTTONDOWN USERNAME]`, the form isn't connected and shows a "coming soon" message instead.
+- Recommended Buttondown settings: keep **double opt-in** on (subscribers confirm by email), and turn off open and click tracking for privacy.
 
 ## Regenerating images
 

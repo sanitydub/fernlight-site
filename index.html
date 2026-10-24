@@ -305,8 +305,9 @@
       <div class="cta-inner wrap">
         <p class="eyebrow mono reveal">[ JOIN THE WAITLIST ]</p>
         <h2 id="waitlist-title" class="cta-title reveal">Let’s grow something <span class="serif">bright.</span></h2>
-        <!-- The waitlist isn't connected yet. See README.md → "Waitlist form". -->
-        <form class="form reveal" data-waitlist novalidate>
+        <!-- Waitlist signups go to Buttondown. See README.md → "Waitlist form". -->
+        <form class="form reveal" data-waitlist novalidate method="post" target="_blank" action="https://buttondown.com/api/emails/embed-subscribe/sanitydub">
+          <input type="hidden" name="embed" value="1">
           <label class="visually-hidden" for="email">Email address</label>
           <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
           <button class="submit" type="submit">Notify me</button>
