@@ -111,7 +111,6 @@ body {
   color: var(--fg);
   font-family: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-weight: 300;
-  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -225,9 +224,13 @@ a:hover { opacity: .8; }
   background: var(--accent);
   transform-origin: left center;
   transform: scaleX(0);
+  will-change: transform;
 }
 
 /* ---------- Hero ---------- */
+/* Clip the leaves here, not on <body>: overflow on body spreads to the whole
+   page and makes the sticky top bar jitter in iOS Safari. */
+#top { overflow-x: clip; }
 .hero-leaves {
   display: flex;
   justify-content: flex-end;
