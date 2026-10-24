@@ -28,17 +28,8 @@ The easiest way is right on GitHub:
 
 - **Change text:** open `index.html` and search for the words you want to change.
 - **Change colours:** open `css/styles.css`. The colours are listed at the very top: the first block is dark mode, the `[data-theme="light"]` block is light mode.
-- **Add the founder photo:** upload a photo to `assets/` (for example `founder.jpg`), then in `index.html` find `[FOUNDER PHOTO]` and follow the comment just above it.
-
-### Placeholders to fill in
-
-Search `index.html` for these and replace them:
-
-- `[YOUR NAME]`: your name in the "Note from the studio" section
-- `[FOUNDER PHOTO]`: see above
-- `[FIRST APP NAME]`: the name of your first app
-- `[APP NAME]`: shown in the small notification mock-up
-- `hello@fernlightapps.com`: change it if your contact email is different (it appears in two places)
+- **Add the founder photo:** the "Note from the studio" section shows a plain colour block for now. Upload a photo to `assets/` (for example `founder.jpg`), then in `index.html` search for `note-photo-placeholder` and follow the comment just above it.
+- **Contact email:** `hello@fernlightapps.com` appears in two places in `index.html` (the Contact button and the footer).
 
 ## Waitlist form
 
