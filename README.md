@@ -1,6 +1,6 @@
 # Fernlight (fernlightapps.com)
 
-The landing page for Fernlight, an independent studio building AI-powered apps and services.
+The landing page for Fernlight, a small, independent app studio making everyday apps.
 It's a plain static site (HTML, CSS and a little JavaScript) hosted free on GitHub Pages.
 
 ## What's where
@@ -8,8 +8,8 @@ It's a plain static site (HTML, CSS and a little JavaScript) hosted free on GitH
 | File | What it is |
 |---|---|
 | `index.html` | The page itself: all the words and sections |
-| `css/styles.css` | Colours, fonts, spacing, layout and all animations |
-| `js/main.js` | Light/dark toggle, nav highlight, scroll animations for older browsers, waitlist message |
+| `css/styles.css` | Colours, fonts, spacing, layout, the logo colours and the hero animation |
+| `js/main.js` | Waitlist form messages, and keeps section links clear of the top bar |
 | `404.html` | The "page not found" page |
 | `assets/` | Favicon, app icons and the social share image |
 | `assets/source/` | The HTML files the icons and share image are made from |
@@ -27,9 +27,9 @@ The easiest way is right on GitHub:
 ### Common edits
 
 - **Change text:** open `index.html` and search for the words you want to change.
-- **Change colours:** open `css/styles.css`. The colours are listed at the very top: the first block is dark mode, the `[data-theme="light"]` block is light mode.
-- **Add the founder photo:** the "Note from the studio" section shows a plain colour block for now. Upload a photo to `assets/` (for example `founder.jpg`), then in `index.html` search for `note-photo-placeholder` and follow the comment just above it.
-- **Contact email:** `hello@fernlightapps.com` appears in two places in `index.html` (the Contact button and the footer).
+- **Change colours:** open `css/styles.css`. The site colours are listed at the very top. The logo always uses the Graphite palette (graphite `#18181B`, steel `#71717A`, mist `#D4D4D8`); search for "Stack mark" to find it.
+- **Fonts:** the whole site uses Geist, loaded from Google Fonts in the `<head>` of `index.html`.
+- **Contact email:** `hello@fernlightapps.com` appears in the footer of `index.html`.
 
 ## Waitlist form
 
@@ -68,9 +68,8 @@ python3 -m http.server 8080
 
 Then open http://localhost:8080 in your browser.
 
-## Browser support
+## Motion
 
-The scroll animations (section fade-ins, the progress line and the hero leaf drift) run from `js/main.js` the same way in every browser, so Chrome, Edge, Brave, Safari and Firefox all look alike.
-They only animate position and opacity, which browsers can draw without slowing the page down.
-Looping animations pause while their section is off screen.
-If a visitor's device is set to reduce motion, all animation is turned off.
+The page has one animation: when it loads, the headline rises in and the three app windows in the hero settle into place.
+It only animates position and opacity, so it runs smoothly in every browser.
+If a visitor's device is set to reduce motion, it's turned off.
