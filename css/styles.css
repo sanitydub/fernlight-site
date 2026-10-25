@@ -345,8 +345,8 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600; color: va
 }
 .quote figcaption { margin-top: 32px; display: inline-flex; align-items: center; gap: 12px; color: var(--ink-2); }
 .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--cobalt-tint); display: grid; place-items: center; font-weight: 600; font-size: 14px; color: var(--cobalt-deep); }
-.quote figcaption strong { color: var(--ink); font-weight: 600; display: block; text-align: left; }
-.quote figcaption span { font-size: 14px; display: block; text-align: left; }
+.quote figcaption strong { color: var(--ink); font-weight: 600; display: block; text-align: center; }
+.quote figcaption span { font-size: 14px; display: block; text-align: center; }
 
 /* Waitlist band */
 .cta { background: var(--cobalt); color: #fff; padding: 112px 0 120px; text-align: center; }
