@@ -20,7 +20,7 @@
   --lilac-tint: #EEEDFF;
 
   /* Type */
-  --display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+  --display: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --body: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   /* Shape and motion */
@@ -180,7 +180,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600; color: va
   margin: 0 auto;
   font-size: clamp(48px, 7.6vw, 112px);
   line-height: .96;
-  letter-spacing: -.028em;
+  letter-spacing: -.045em;
   font-weight: 600;
   font-variation-settings: 'wdth' 92, 'opsz' 96;
 }
