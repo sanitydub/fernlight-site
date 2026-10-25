@@ -5,59 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found | Fernlight</title>
   <meta name="robots" content="noindex">
-  <script>
-    (function () {
-      var t;
-      try { t = localStorage.getItem('fernlight-theme'); } catch (e) {}
-      if (t !== 'light' && t !== 'dark') {
-        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-      }
-      document.documentElement.setAttribute('data-theme', t);
-    })();
-  </script>
   <!-- Absolute paths: this page can be served at any missing URL -->
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400&display=swap">
-  <link rel="stylesheet" href="/css/styles.css?v=4">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Geist:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/css/styles.css?v=5">
 </head>
 <body>
-  <div class="topbar">
-    <div class="ruler" aria-hidden="true"></div>
-    <header class="header wrap">
-      <a href="/" class="logo" aria-label="Fernlight home">
-        <span class="logo-mark" aria-hidden="true">
-          <svg viewBox="-80 -300 160 310">
-          <g class="logo-leaves" transform="rotate(10)">
-            <path d="M0 10 L0 -280" stroke-width="10" stroke-linecap="round"/>
-            <g stroke="none">
-              <ellipse cx="34" cy="0" rx="34" ry="12" transform="translate(0 -30) rotate(-30)"/><ellipse cx="34" cy="0" rx="34" ry="12" transform="translate(0 -30) rotate(-150)"/>
-              <ellipse cx="29" cy="0" rx="29" ry="11" transform="translate(0 -80) rotate(-30)"/><ellipse cx="29" cy="0" rx="29" ry="11" transform="translate(0 -80) rotate(-150)"/>
-              <ellipse cx="23" cy="0" rx="23" ry="9" transform="translate(0 -130) rotate(-30)"/><ellipse cx="23" cy="0" rx="23" ry="9" transform="translate(0 -130) rotate(-150)"/>
-              <ellipse cx="16" cy="0" rx="16" ry="7" transform="translate(0 -180) rotate(-30)"/><ellipse cx="16" cy="0" rx="16" ry="7" transform="translate(0 -180) rotate(-150)"/>
-            </g>
-          </g>
-        </svg>
-          <span class="logo-sun"></span>
-        </span>
+  <div class="nav-bar">
+    <header class="nav">
+      <a class="brand" href="/" aria-label="Fernlight home">
+        <svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#2E3CF5"/><path d="M9 7h11v4h-7v3h6v4h-6v5H9z" fill="#fff"/></svg>
         <span aria-hidden="true">Fernlight</span>
       </a>
     </header>
-    <div class="progress" aria-hidden="true"></div>
   </div>
-
-  <main class="lost wrap">
-    <p class="eyebrow mono">[ 404 ]</p>
-    <h1>This path hasn’t<br><span class="serif">grown yet.</span></h1>
-    <p>The page you’re looking for doesn’t exist or has moved.</p>
-    <a class="btn btn-solid" href="/">Back to Fernlight
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-    </a>
+  <main class="lost">
+    <h1>This page doesn’t exist.</h1>
+    <p>It may have moved, or the link might have a typo.</p>
+    <a class="btn btn-ink" href="/">Go to the homepage</a>
   </main>
-
-  <div class="ruler" aria-hidden="true"></div>
 </body>
 </html>
