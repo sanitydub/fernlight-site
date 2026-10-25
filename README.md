@@ -70,6 +70,7 @@ Then open http://localhost:8080 in your browser.
 
 ## Browser support
 
-The scroll animations use modern CSS where the browser supports it (Chrome, Edge, Brave, Safari 26+).
-In other browsers (Firefox, older Safari), `js/main.js` plays the same animations instead.
+The scroll animations (section fade-ins, the progress line and the hero leaf drift) run from `js/main.js` the same way in every browser, so Chrome, Edge, Brave, Safari and Firefox all look alike.
+They only animate position and opacity, which browsers can draw without slowing the page down.
+Looping animations pause while their section is off screen.
 If a visitor's device is set to reduce motion, all animation is turned off.

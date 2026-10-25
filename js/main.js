@@ -3,7 +3,7 @@
    1. Light/dark toggle (remembers the visitor's choice)
    2. Keeps section links clear of the sticky top bar
    3. Highlights the current section in the nav
-   4. Scroll-motion fallback for browsers without CSS scroll-driven animations
+   4. Scroll motion: section reveals, reading progress, hero parallax
    5. Waitlist form "coming soon" message
    ========================================================================== */
 (function () {
@@ -84,12 +84,10 @@
   setActive('top');
 
   /* ---------- 4. Scroll motion ---------- */
-  // Section reveals: Chromium and Safari 26+ use native CSS; others get the
-  // IntersectionObserver fallback below.
-  var nativeScrollMotion = window.CSS && CSS.supports && CSS.supports('animation-timeline: view()');
-
-  if (!nativeScrollMotion && !reduceMotion) {
-    root.classList.add('no-sdt');
+  // Section reveals: the same time-based fade in every browser, triggered by
+  // an IntersectionObserver as each element enters the screen.
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    root.classList.add('js-motion');
 
     var targets = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
@@ -107,16 +105,33 @@
     }
   }
 
-  // Reading progress and hero parallax run from here in every browser:
-  // Safari's native scroll() timelines jump backwards whenever a new swipe
-  // starts, which made the progress line under the top bar flicker.
+  // Reading progress and hero parallax, written straight onto those elements
+  // (compositor-only properties) so a scroll frame triggers no page-wide style
+  // or layout work. Safari's native scroll() timelines jumped backwards on each
+  // new swipe, so this runs in every browser.
+  var bar = document.querySelector('.progress span');
+  var leaves = [
+    [document.querySelector('.leaf1'), -40],
+    [document.querySelector('.leaf2'), -96],
+    [document.querySelector('.leaf3'), -24]
+  ];
+  var maxScroll = 1;
+  var measure = function () {
+    maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  };
+  var lastHero = -1;
   var ticking = false;
   var update = function () {
     ticking = false;
     var y = Math.max(0, window.scrollY || window.pageYOffset || 0);
-    var max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-    if (!reduceMotion) root.style.setProperty('--hero-p', Math.min(1, y / 900).toFixed(4));
-    root.style.setProperty('--read', Math.min(1, y / max).toFixed(4));
+    if (bar) bar.style.transform = 'scaleX(' + Math.min(1, y / maxScroll).toFixed(4) + ')';
+    var hero = Math.min(1, y / 900);
+    if (!reduceMotion && hero !== lastHero) {
+      lastHero = hero;
+      leaves.forEach(function (l) {
+        if (l[0]) l[0].style.translate = '0 ' + (hero * l[1]).toFixed(1) + 'px';
+      });
+    }
   };
   var onScroll = function () {
     if (!ticking) {
@@ -125,8 +140,23 @@
     }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll, { passive: true });
+  window.addEventListener('resize', function () { measure(); onScroll(); }, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(function () { measure(); onScroll(); }).observe(document.body);
+  measure();
   update();
+
+  // Pause looping animations (fern, glow, orbit, waitlist leaves) while their
+  // section is off screen, so they cost nothing there.
+  if ('IntersectionObserver' in window) {
+    var loopObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        entry.target.classList.toggle('is-offscreen', !entry.isIntersecting);
+      });
+    });
+    document.querySelectorAll('.hero-leaves, .tile-rings, .cta').forEach(function (el) {
+      loopObserver.observe(el);
+    });
+  }
 
   /* ---------- 5. Waitlist (Buttondown) ---------- */
   // The form posts to Buttondown in a new tab (their docs require a real form
