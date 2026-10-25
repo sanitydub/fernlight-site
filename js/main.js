@@ -1,5 +1,6 @@
 /* ==========================================================================
    Fernlight: behaviour
+   0. Starts at the top on reload
    1. Keeps section links clear of the sticky nav
    2. Waitlist form (Buttondown)
    3. Footer year
@@ -8,6 +9,15 @@
   'use strict';
 
   var root = document.documentElement;
+
+  /* ---------- 0. Reload → back to the top ---------- */
+  // A reload always starts at the top so the hero animation is seen. A fresh
+  // visit to a link like /#waitlist still jumps to that section.
+  var navEntry = window.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+  if (navEntry && navEntry.type === 'reload' && location.hash) {
+    history.replaceState(null, '', location.pathname + location.search);
+  }
+  if (!location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 
   /* ---------- 1. Nav height → scroll offset ---------- */
   var navBar = document.querySelector('.nav-bar');

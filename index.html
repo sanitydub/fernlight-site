@@ -6,7 +6,12 @@
   <title>Fernlight | Everyday apps, made beautifully</title>
   <meta name="description" content="Fernlight is a small, independent app studio. We design and build apps that look good, work well and earn a place in your day.">
   <link rel="canonical" href="https://fernlightapps.com/">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    document.documentElement.classList.add('js');
+    // Start at the top on reload in every browser (Chromium and Firefox otherwise
+    // restore the old scroll position, so the hero animation plays off-screen)
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  </script>
 
   <!-- Icons -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -35,7 +40,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
 
   <link rel="stylesheet" href="css/styles.css?v=9">
-  <script src="js/main.js?v=9" defer></script>
+  <script src="js/main.js?v=10" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
