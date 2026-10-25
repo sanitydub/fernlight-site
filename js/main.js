@@ -40,7 +40,7 @@
         email.focus();
         return;
       }
-      status.textContent = 'Almost done. Buttondown opened in a new tab and sent you an email. Click the link in it to confirm your spot.';
+      status.textContent = 'Almost done. Check your inbox and click the link in our email to confirm your spot on the Frond waitlist.';
       setTimeout(function () { form.reset(); }, 0);
     });
   }
