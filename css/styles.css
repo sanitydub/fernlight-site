@@ -91,13 +91,11 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600; color: va
   font-size: clamp(32px, 4.2vw, 56px);
   line-height: 1.02;
   letter-spacing: -.035em;
-  font-variation-settings: 'wdth' 85, 'opsz' 72;
 }
 .h-row {
   font-size: clamp(28px, 2.6vw, 36px);
   line-height: 1.08;
   letter-spacing: -.025em;
-  font-variation-settings: 'wdth' 88, 'opsz' 48;
 }
 .lede { margin: 0; font-size: 18px; line-height: 1.6; color: var(--ink-2); max-width: 60ch; }
 
@@ -161,6 +159,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600; color: va
 .mk2 { fill: var(--mk2); }
 .mk3 { fill: var(--mk3); }
 .nav > nav { margin: 0 auto; }
+.nav-cta { flex: 0 0 auto; }
 .nav-links { display: flex; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .nav-links a {
   display: inline-block;
@@ -182,7 +181,6 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600; color: va
   line-height: .96;
   letter-spacing: -.045em;
   font-weight: 600;
-  font-variation-settings: 'wdth' 92, 'opsz' 96;
 }
 .hero .lede { margin: 32px auto 0; max-width: 52ch; }
 .hero-actions { display: flex; justify-content: center; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
@@ -255,7 +253,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600; color: va
 .principle { padding: 40px 40px 0 0; }
 .principle + .principle { padding-left: 40px; border-left: 1px solid var(--line); }
 .principle .icon { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 24px; border-radius: 14px; background: var(--c); color: var(--ink); }
-.principle h3 { font-size: 22px; letter-spacing: -.02em; font-variation-settings: 'wdth' 90; margin-bottom: 8px; }
+.principle h3 { font-size: 22px; letter-spacing: -.02em; margin-bottom: 8px; }
 .principle p { margin: 0; color: var(--ink-2); max-width: 36ch; }
 
 /* Process panel */
@@ -289,7 +287,6 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600; color: va
   font-size: clamp(28px, 3.4vw, 44px);
   line-height: 1.15;
   letter-spacing: -.03em;
-  font-variation-settings: 'wdth' 88, 'opsz' 48;
 }
 .quote figcaption { margin-top: 32px; display: inline-flex; align-items: center; gap: 12px; color: var(--ink-2); }
 .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--cobalt-tint); display: grid; place-items: center; font-weight: 600; font-size: 14px; color: var(--cobalt-deep); }
@@ -335,7 +332,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600; color: va
 
 /* 404 */
 .lost { min-height: 70vh; display: grid; place-content: center; justify-items: center; gap: 24px; padding: 96px var(--gutter); text-align: center; }
-.lost h1 { font-size: clamp(44px, 6vw, 80px); line-height: 1; letter-spacing: -.04em; font-variation-settings: 'wdth' 80, 'opsz' 96; }
+.lost h1 { font-size: clamp(44px, 6vw, 80px); line-height: 1; letter-spacing: -.04em; }
 .lost p { margin: 0; color: var(--ink-2); max-width: 40ch; }
 
 /* ---------- Responsive ---------- */

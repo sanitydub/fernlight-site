@@ -37,7 +37,7 @@ GitHub Pages can't store form submissions, so signups go to [Buttondown](https:/
 You'll see and export subscribers in your Buttondown dashboard, and can email them from there when you launch.
 
 - The form's `action` in `index.html` ends with your Buttondown username. If you change usernames, update it there.
-- Submitting opens Buttondown's confirmation in a new tab (Buttondown needs this to show a CAPTCHA if required), and the page shows a "check your inbox" message.
+- Submitting opens Buttondown's confirmation in a new tab (Buttondown needs this to show a CAPTCHA if required), and the page asks the visitor to finish signing up there, then confirm by email.
 - If the `action` still contains `[BUTTONDOWN USERNAME]`, the form isn't connected and shows a "coming soon" message instead.
 - Recommended Buttondown settings: keep **double opt-in** on (subscribers confirm by email), and turn off open and click tracking for privacy.
 
