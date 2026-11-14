@@ -1,6 +1,6 @@
 # Fernlight (fernlightapps.com)
 
-The landing page for Fernlight, a small, independent app studio making everyday apps.
+The landing page for Fernlight, an independent app studio building beautiful, dependable everyday apps, with AI and with care.
 It's a plain static site (HTML, CSS and a little JavaScript) hosted free on GitHub Pages.
 
 ## What's where
@@ -8,8 +8,8 @@ It's a plain static site (HTML, CSS and a little JavaScript) hosted free on GitH
 | File | What it is |
 |---|---|
 | `index.html` | The page itself: all the words and sections |
-| `css/styles.css` | Colours, fonts, spacing, layout, the logo colours and the hero animation |
-| `js/main.js` | Waitlist form messages, and keeps section links clear of the top bar |
+| `css/styles.css` | Colours, fonts, spacing, layout, the wordmark and all motion |
+| `js/main.js` | Sticky nav, fade-in sections, the Inkwell preview's Write/Split/Read switch, and signup form messages |
 | `404.html` | The "page not found" page |
 | `assets/` | Favicon, app icons and the social share image |
 | `assets/source/` | The HTML files the icons and share image are made from |
@@ -27,14 +27,15 @@ The easiest way is right on GitHub:
 ### Common edits
 
 - **Change text:** open `index.html` and search for the words you want to change.
-- **Change colours:** open `css/styles.css`. The site colours are listed at the very top. The logo always uses the Graphite palette (graphite `#18181B`, steel `#71717A`, mist `#D4D4D8`); search for "Stack mark" to find it.
-- **Fonts:** the whole site uses Geist, loaded from Google Fonts in the `<head>` of `index.html`.
+- **Change colours:** open `css/styles.css`. The site colours are listed at the very top: Fernlight green `--fern` (#B9DB6A), warm black `--ink` (#17150F), cream `--cream` (#F7F3EA), khaki `--sand` (#ECE4CF) and a pale sage `--sage` (#DCE6C9), used sparingly.
+- **Logo:** the logo is the lowercase **fernlight** wordmark, typed in Archivo ExtraBold (search for "Wordmark" in `css/styles.css`). The icons use an "f" lettermark in fern green on warm black (`assets/favicon.svg`).
+- **Fonts:** Archivo (headlines and text) and Newsreader (serif accents), loaded from Google Fonts in the `<head>` of `index.html`.
 - **Contact email:** `hello@fernlightapps.com` appears in the footer of `index.html`.
 
-## Waitlist form
+## Updates form
 
 GitHub Pages can't store form submissions, so signups go to [Buttondown](https://buttondown.com).
-You'll see and export subscribers in your Buttondown dashboard, and can email them from there when you launch.
+You'll see and export subscribers in your Buttondown dashboard, and can email them from there when you ship something new.
 
 - The form's `action` in `index.html` ends with your Buttondown username. If you change usernames, update it there.
 - Submitting opens Buttondown's confirmation in a new tab (Buttondown needs this to show a CAPTCHA if required), and the page asks the visitor to finish signing up there, then confirm by email.
@@ -70,6 +71,7 @@ Then open http://localhost:8080 in your browser.
 
 ## Motion
 
-The page has one animation: when it loads, the headline rises in and the three app windows in the hero settle into place.
-It only animates position and opacity, so it runs smoothly in every browser.
-If a visitor's device is set to reduce motion, it's turned off.
+When the page loads, the headline rises in and the Inkwell phone slides up behind the cream sheet, followed by the two small cards beside it.
+As you scroll, sections fade up gently and the four "How we build" cards stack on top of each other (pure CSS, `position: sticky`).
+Everything animates only position and opacity, so it runs smoothly in every browser.
+If a visitor's device is set to reduce motion, it's all turned off.

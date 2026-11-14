@@ -4,32 +4,37 @@
 <head>
 <meta charset="utf-8">
 <title>Fernlight share image</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../../css/styles.css?v=50">
 <style>
   html, body { margin: 0; }
-  body { width: 1200px; height: 630px; overflow: hidden; background: #F6F6F7; color: #18181B; font-family: 'Geist', sans-serif; position: relative; }
+  body { width: 1200px; height: 630px; overflow: hidden; background: #B9DB6A; position: relative; }
   .copy { position: absolute; left: 80px; top: 72px; bottom: 72px; width: 640px; display: flex; flex-direction: column; justify-content: space-between; }
-  .brand { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 40px; letter-spacing: -0.03em; }
-  .brand svg { width: 48px; height: 48px; }
-  .brand rect { stroke: #F6F6F7; stroke-width: 7; }
-  h1 { margin: 0; font-family: 'Geist', sans-serif; font-weight: 600; font-size: 80px; line-height: 0.98; letter-spacing: -0.045em; }
-  .url { font-size: 24px; color: #52525B; }
-  .tile { position: absolute; right: 80px; top: 115px; width: 400px; height: 400px; border-radius: 96px; background: #18181B; display: grid; place-items: center; }
-  .tile svg { width: 230px; height: 230px; }
-  .tile rect { stroke: #18181B; stroke-width: 7; }
+  .copy .wordmark { font-size: 48px; }
+  h1 { font-size: 88px; line-height: .95; letter-spacing: -.045em; }
+  .url { font-size: 24px; font-weight: 600; }
+  .phone { position: absolute; right: 110px; top: 90px; margin: 0; }
+  .phone, .phone * { animation: none !important; }
 </style>
 </head>
 <body>
   <div class="copy">
-    <div class="brand">
-      <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="32" y="6" width="62" height="50" rx="14" fill="#D4D4D8"/><rect x="19" y="25" width="62" height="50" rx="14" fill="#71717A"/><rect x="6" y="44" width="62" height="50" rx="14" fill="#18181B"/></svg>
-      Fernlight
-    </div>
-    <h1>Everyday apps, made beautifully.</h1>
+    <span class="wordmark">fernlight</span>
+    <h1>Beautiful apps that actually work.</h1>
     <div class="url">fernlightapps.com</div>
   </div>
-  <div class="tile">
-    <svg viewBox="0 0 100 100" aria-hidden="true"><rect x="32" y="6" width="62" height="50" rx="14" fill="#52525B"/><rect x="19" y="25" width="62" height="50" rx="14" fill="#A1A1AA"/><rect x="6" y="44" width="62" height="50" rx="14" fill="#FFFFFF"/></svg>
+  <div class="phone">
+    <div class="screen">
+      <div class="ph-status"><span>9:41</span><span class="ph-dots"><i></i><i></i><i></i></span></div>
+      <div class="ik-top"><span class="ik-menu"><i></i><i></i><i></i></span><strong>All notes</strong><span class="ik-new">+ New</span></div>
+      <div class="ik-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Search</div>
+      <ul class="ik-notes">
+        <li class="on"><strong>Spring planting plan</strong><span>Move the tomatoes to the south bed this year and try companion planting…</span><em>Pinned · 1:17 AM</em></li>
+        <li><strong>Seed order</strong><span>For the Spring planting plan. #garden/veg</span><em>1:17 AM</em></li>
+        <li><strong>Q1 roadmap</strong><span>Themes, faster search, import from Joplin and Obsidian…</span><em>Yesterday</em></li>
+        <li><strong>Books to read</strong><span>Next up: The Overstory, Piranesi…</span><em>Monday</em></li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
