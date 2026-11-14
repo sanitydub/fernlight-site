@@ -3,61 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fernlight | Everyday apps, made beautifully</title>
-  <meta name="description" content="Fernlight is a small, independent app studio. We design and build apps that look good, work well and earn a place in your day.">
+  <title>Fernlight | Beautiful apps that actually work</title>
+  <meta name="description" content="Fernlight is an independent app studio designing and building everyday apps. We use AI to move faster, and people to make every decision that matters.">
   <link rel="canonical" href="https://fernlightapps.com/">
-  <script>
-    document.documentElement.classList.add('js');
-    // Start at the top on reload in every browser (Chromium and Firefox otherwise
-    // restore the old scroll position, so the hero animation plays off-screen)
-    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  </script>
+  <script>document.documentElement.classList.add('js');</script>
 
   <!-- Icons -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#F4F5F7">
+  <meta name="theme-color" content="#B9DB6A">
 
   <!-- Social sharing -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fernlight">
-  <meta property="og:title" content="Fernlight | Everyday apps, made beautifully">
-  <meta property="og:description" content="A small, independent app studio making beautiful, dependable apps for everyday life.">
+  <meta property="og:title" content="Fernlight | Beautiful apps that actually work">
+  <meta property="og:description" content="An independent app studio building beautiful, dependable everyday apps, with AI and with care.">
   <meta property="og:url" content="https://fernlightapps.com/">
   <meta property="og:image" content="https://fernlightapps.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fernlight | Everyday apps, made beautifully">
-  <meta name="twitter:description" content="A small, independent app studio making beautiful, dependable apps for everyday life.">
+  <meta name="twitter:title" content="Fernlight | Beautiful apps that actually work">
+  <meta name="twitter:description" content="An independent app studio building beautiful, dependable everyday apps, with AI and with care.">
   <meta name="twitter:image" content="https://fernlightapps.com/assets/og-image.png">
 
-  <!-- Fonts -->
+  <!-- Fonts: Archivo (headlines and text) + Newsreader (serif accents) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
 
-  <link rel="stylesheet" href="css/styles.css?v=9">
-  <script src="js/main.js?v=10" defer></script>
+  <link rel="stylesheet" href="css/styles.css?v=50">
+  <script src="js/main.js?v=50" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="nav-bar">
+  <div class="nav-bar" data-nav>
     <header class="nav">
-      <a class="brand" href="#top" aria-label="Fernlight, back to top">
-        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><rect class="mk1" x="32" y="6" width="62" height="50" rx="14"/><rect class="mk2" x="19" y="25" width="62" height="50" rx="14"/><rect class="mk3" x="6" y="44" width="62" height="50" rx="14"/></svg>
-        <span aria-hidden="true">Fernlight</span>
-      </a>
+      <a class="brand" href="#top" aria-label="Fernlight, back to top"><span class="wordmark" aria-hidden="true">fernlight</span></a>
       <nav aria-label="Sections">
         <ul class="nav-links">
-          <li><a href="#make">What we make</a></li>
-          <li><a href="#how">How we work</a></li>
-          <li><a href="#note">About</a></li>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#how">How we build</a></li>
+          <li><a href="#ai">Built with AI</a></li>
+          <li><a href="#about">About</a></li>
         </ul>
       </nav>
+      <a class="btn btn-ink btn-small nav-cta" href="https://github.com/sanitydub/inkwell">Get Inkwell</a>
     </header>
   </div>
 
@@ -65,168 +59,308 @@
     <!-- ===== Hero ===== -->
     <section id="top" class="hero" aria-labelledby="hero-title">
       <div class="container">
-        <h1 id="hero-title" class="hero-title">Everyday apps, made beautifully.</h1>
-        <p class="lede">Fernlight is a small, independent app studio. We design and build apps that look good, work well and earn a place in your day.</p>
-<div class="hero-actions">
-          <a class="btn btn-ink" href="#waitlist">Join the Frond waitlist</a>
-          <a class="btn btn-ghost" href="#make">See what we make</a>
+        <p class="eyebrow">Independent app studio</p>
+        <h1 id="hero-title" class="hero-title">Beautiful apps that actually work.</h1>
+        <p class="lede">Fernlight designs and builds everyday apps. We use AI to move faster, and people to make every decision that matters.</p>
+        <div class="hero-actions">
+          <a class="btn btn-ink" href="#apps">Meet Inkwell</a>
+          <a class="btn btn-line" href="#how">How we build</a>
         </div>
 
-        <div class="stage" aria-hidden="true">
-<div class="frames">
-<div class="frame f1"><div class="sk w30"></div><div class="sk w70"></div><div class="sk w50"></div></div>
-<div class="frame f2"><div class="sk w30"></div><div class="sk w70"></div><div class="sk w50"></div></div>
-<div class="frame f3"><div class="sk w30"></div><div class="sk w70"></div><div class="sk w50"></div><div class="tiles"><i></i><i></i><i></i></div></div>
-</div>
-</div>
+        <!-- Hero visual: Inkwell on a phone, rising out of the page -->
+        <div class="hero-art" aria-hidden="true">
+          <div class="float-card fc-left">
+            <span class="fc-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/><path d="M8 7h.01M8 17h.01"/></svg></span>
+            <div><strong>Runs on your own server</strong><span>Every note in one SQLite file</span></div>
+          </div>
+          <div class="float-card fc-right">
+            <span class="fc-icon fc-sage"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span>
+            <div><strong>[[Seed order]]</strong><span>Linked from 1 note</span></div>
+          </div>
+          <div class="phone">
+            <div class="screen">
+              <div class="ph-status"><span>9:41</span><span class="ph-dots"><i></i><i></i><i></i></span></div>
+              <div class="ik-top"><span class="ik-menu"><i></i><i></i><i></i></span><strong>All notes</strong><span class="ik-new">+ New</span></div>
+              <div class="ik-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Search</div>
+              <ul class="ik-notes">
+                <li class="on"><strong>Spring planting plan</strong><span>Move the tomatoes to the south bed this year and try companion planting…</span><em>Pinned · 1:17 AM</em></li>
+                <li><strong>Seed order</strong><span>For the Spring planting plan. #garden/veg</span><em>1:17 AM</em></li>
+                <li><strong>Q1 roadmap</strong><span>Themes, faster search, import from Joplin and Obsidian…</span><em>Yesterday</em></li>
+                <li><strong>Books to read</strong><span>Next up: The Overstory, Piranesi…</span><em>Monday</em></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ===== What we make ===== -->
-    <section id="make" class="section" aria-labelledby="make-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="make-title" class="h-section">What we make</h2>
-          <p class="lede">A small set of everyday apps, each one designed and built with the same care.</p>
-        </div>
+    <!-- The cream "sheet" that rises over the hero -->
+    <div class="sheet">
 
-        <div class="rows">
-          <article class="row">
-<div class="row-copy">
-<span class="status">First app in planning</span>
-<h3 class="h-row">Our apps</h3>
-<p class="lede">Everyday apps, built one at a time. The first is Frond, a private tracker for your money and net worth that keeps your data on your device. It’s in planning now.</p>
-</div>
-<div class="panel panel-cobalt" aria-hidden="true">
-<div class="appgrid">
-<div class="app on"><i></i><span>Frond</span></div>
-<div class="app"><i></i><span>Later</span></div>
-<div class="app"><i></i><span>Later</span></div>
-<div class="app"><i></i><span>Later</span></div>
-<div class="app"><i></i><span>Later</span></div>
-<div class="app"><i></i><span>Later</span></div>
-</div>
-</div>
-</article>
+      <!-- ===== Apps ===== -->
+      <section id="apps" class="section" aria-labelledby="apps-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 id="apps-title" class="h-section">Fewer apps.<br>Made properly.</h2>
+            <p class="lede">We build one app at a time and hold each to the same standard: clear design, solid engineering, and respect for the people using it.</p>
+          </div>
 
-          <article class="row flip">
-            <div class="row-copy">
-              <h3 class="h-row">Design comes first</h3>
-              <p class="lede">We treat design as part of the product. That means clear screens, simple steps, and notifications only when something needs you.</p>
+          <article class="block reveal" aria-labelledby="inkwell-title">
+            <div class="block-head">
+              <span class="label">First release</span>
+              <span class="status">Available now</span>
             </div>
-            <div class="panel panel-grey" aria-hidden="true">
-              <div class="stack">
-                <div class="note"><i style="--c:#FF5A36"></i><div><strong>Your notes are summarised</strong><span>Three things need a reply today</span></div></div>
-                <div class="note muted"><i style="--c:#C9C6FF"></i><div><strong>Weekly summary is ready</strong><span>Open when you have a minute</span></div></div>
-                <div class="note muted"><i style="--c:#E3E6FF"></i><div><strong>Nothing else needs you today</strong><span>We’ll let you know</span></div></div>
+            <div class="showcase">
+              <div class="showcase-copy">
+                <h3 id="inkwell-title" class="h-card">Inkwell</h3>
+                <p class="kicker">Notes that live on your own server.</p>
+                <p>Inkwell is a simple note-taking app you host yourself. Write in Markdown with a live preview, find anything with full-text search, and keep every note in a single SQLite file that you control, with no requests to outside services.</p>
+                <ul class="ticks">
+                  <li>Markdown with Write, Split and Read views</li>
+                  <li>Notebooks, #tags and [[wiki-links]] with backlinks</li>
+                  <li>Import from Obsidian or Joplin, export any time</li>
+                </ul>
+                <div class="showcase-actions">
+                  <a class="btn btn-ink" href="https://github.com/sanitydub/inkwell">View on GitHub</a>
+                  <a class="btn btn-line" href="https://github.com/sanitydub/inkwell#run-it-with-docker">Setup guide</a>
+                </div>
+                <p class="showcase-note">Free and open source (AGPL-3.0). Runs with one Docker command.</p>
+              </div>
+
+              <div class="showcase-demo">
+                <div class="ink" data-ink data-view="split">
+                  <div class="ik-bar">
+                    <span class="ik-edited">Edited just now</span>
+                    <div class="ik-seg" role="group" aria-label="Note layout">
+                      <button type="button" data-view="write" aria-pressed="false">Write</button>
+                      <button type="button" data-view="split" aria-pressed="true">Split</button>
+                      <button type="button" data-view="read" aria-pressed="false">Read</button>
+                    </div>
+                  </div>
+                  <p class="ik-title">Spring planting plan</p>
+                  <div class="ik-chips"><span>Garden</span><span>Linked from 1</span><span class="ik-tag">#garden/veg</span></div>
+                  <div class="ik-panes">
+                    <pre class="ik-src" aria-label="Markdown source"><span class="m">##</span> <b>Beds</b>
+Move the <span class="m">**</span><b>tomatoes</b><span class="m">**</span> to the south bed. Quantities are in <span class="ik-link">[[Seed order]]</span>. <span class="ik-tag">#garden/veg</span>
+
+<span class="m">##</span> <b>This weekend</b>
+<span class="m">- [x]</span> Turn the compost
+<span class="m">- [ ]</span> Build the bean trellis</pre>
+                    <div class="ik-read" aria-label="Rendered note">
+                      <h5>Beds</h5>
+                      <p>Move the <b>tomatoes</b> to the south bed. Quantities are in <u>Seed order</u>. <span class="ik-tag">#garden/veg</span></p>
+                      <h5>This weekend</h5>
+                      <ul class="ik-tasks"><li class="done">Turn the compost</li><li>Build the bean trellis</li></ul>
+                    </div>
+                  </div>
+                </div>
+                <p class="demo-note">A live preview of the editor. Try Write, Split and Read.</p>
               </div>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== How we work ===== -->
-    <section id="how" class="section" aria-labelledby="how-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="how-title" class="h-section">How we work</h2>
-        </div>
-        <div class="principles">
-          <div class="principle">
-            <span class="icon" style="--c:#E3E6FF" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span>
-            <h3>One standard</h3>
-            <p>Every app gets the same care. No drop in quality from one to the next.</p>
-          </div>
-          <div class="principle">
-            <span class="icon" style="--c:#FFE4DC" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 12h6M12 9v6"/></svg></span>
-            <h3>Respect for you</h3>
-            <p>We collect only what we need, we’re honest about data, and we never trick you into paying or staying.</p>
-          </div>
-          <div class="principle">
-            <span class="icon" style="--c:#EEEDFF" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span>
-            <h3>AI-assisted, human-led</h3>
-            <p>AI helps our small team build more. A person always decides what ships.</p>
+          <div class="next-up reveal">
+            <span class="label">Next</span>
+            <div>
+              <h3>More in the pipeline.</h3>
+              <p>Inkwell is the first of a small family of everyday apps. Have a problem worth solving? <a href="mailto:hello@fernlightapps.com">hello@fernlightapps.com</a></p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="process">
-          <svg class="route" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M-60 430 C 180 300, 330 560, 600 440 S 1000 280, 1280 420" fill="none" stroke="#C9C6FF" stroke-width="72" stroke-linecap="round"/>
-          </svg>
-          <h2 class="h-section">How an app gets made</h2>
-          <p>The same four steps for every Fernlight app.</p>
-          <ol class="steps">
-            <li class="step"><h3>Find the problem</h3><p>Start with something people deal with every day.</p></li>
-            <li class="step"><h3>Design it properly</h3><p>Shape the screens and steps until they feel simple.</p></li>
-            <li class="step"><h3>Build and launch</h3><p>Ship it once it works well and feels right.</p></li>
-            <li class="step"><h3>Keep improving</h3><p>Listen to the people using it, and keep refining.</p></li>
+      <!-- ===== How we build (stacking cards) ===== -->
+      <section id="how" class="section" aria-labelledby="how-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 id="how-title" class="h-section">Built the way we’d want to <mark class="hl">use</mark> them.</h2>
+            <p class="lede">Four principles behind every Fernlight app.</p>
+          </div>
+
+          <ol class="cards">
+            <li class="card card-fern">
+              <div class="card-copy">
+                <span class="card-num">01</span>
+                <h3 class="h-card">Design leads.</h3>
+                <p>Every app starts with how it should feel to use. Clear screens, simple flows, and notifications only when they matter.</p>
+              </div>
+              <div class="vig" aria-hidden="true">
+                <div class="vig-row"><span class="vig-title">Type</span><span class="vig-meta">Archivo · Newsreader</span></div>
+                <div class="spec"><span class="spec-aa">Aa</span><span class="spec-scale"><i style="--w:100%"></i><i style="--w:72%"></i><i style="--w:52%"></i><i style="--w:38%"></i></span></div>
+                <div class="vig-row"><span class="vig-title">Colour</span><span class="vig-meta">4 tokens</span></div>
+                <div class="swatches"><i style="--c:#17150F"></i><i style="--c:#B9DB6A"></i><i style="--c:#DCE6C9"></i><i style="--c:#F7F3EA"></i></div>
+                <div class="vig-row"><span class="vig-title">Spacing</span><span class="vig-meta">8-point grid</span></div>
+                <div class="grid8"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+            </li>
+            <li class="card card-sage">
+              <div class="card-copy">
+                <span class="card-num">02</span>
+                <h3 class="h-card">AI accelerates.</h3>
+                <p>AI lets a small team prototype, test and refine far more than it otherwise could. The time it saves goes back into quality.</p>
+              </div>
+              <div class="vig" aria-hidden="true">
+                <div class="vig-row"><span class="vig-title">Build log</span><span class="vig-meta">Today</span></div>
+                <ul class="log">
+                  <li><i class="dot dot-ink"></i><span>Prototype v12 generated</span><em>AI</em></li>
+                  <li><i class="dot dot-ink"></i><span>148 of 148 tests passing</span><em>AI</em></li>
+                  <li><i class="dot dot-ink"></i><span>3 layout variants explored</span><em>AI</em></li>
+                  <li><i class="dot dot-fern"></i><span>Variant B chosen in review</span><em class="em-person">Person</em></li>
+                </ul>
+              </div>
+            </li>
+            <li class="card card-sand">
+              <div class="card-copy">
+                <span class="card-num">03</span>
+                <h3 class="h-card">People decide.</h3>
+                <p>AI drafts; people review and approve. Every screen, every line of copy and every release is signed off by a person.</p>
+              </div>
+              <div class="vig" aria-hidden="true">
+                <div class="vig-row"><span class="vig-title">Release 1.0 review</span><span class="vig-meta">3 of 3</span></div>
+                <ul class="checks">
+                  <li>Copy and tone reviewed</li>
+                  <li>Accessibility pass complete</li>
+                  <li>Tested on older devices</li>
+                </ul>
+                <span class="vig-btn">Approved for release</span>
+              </div>
+            </li>
+            <li class="card card-ink">
+              <div class="card-copy">
+                <span class="card-num">04</span>
+                <h3 class="h-card">Privacy by default.</h3>
+                <p>We collect only what an app needs, explain it plainly, and never use dark patterns to keep you paying or staying.</p>
+              </div>
+              <div class="vig" aria-hidden="true">
+                <div class="vig-row"><span class="vig-title">Your notes</span><span class="vig-meta">Inkwell</span></div>
+                <ul class="toggles">
+                  <li><span>Stored on your own server</span><i class="tg on"></i></li>
+                  <li><span>Tracking and ads</span><i class="tg"></i></li>
+                  <li><span>Requests to outside services</span><i class="tg"></i></li>
+                </ul>
+              </div>
+            </li>
           </ol>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== Founder note ===== -->
-    <section id="note" class="section" aria-label="A note from the founder">
-      <div class="container">
-        <figure class="quote">
-          <blockquote>
-            <p>“I started Fernlight because too many apps feel like a compromise. I want to build everyday apps that hold up against the best, in design and in quality.”</p>
-          </blockquote>
-          <figcaption>
-            <div><strong>SHS</strong><span>Founder, Fernlight</span></div>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
+      <!-- ===== Built with AI ===== -->
+      <section id="ai" class="section" aria-labelledby="ai-title">
+        <div class="container">
+          <div class="split reveal">
+            <div class="split-art">
+              <p class="statement">AI drafts.<br><mark class="hl">People decide.</mark></p>
+              <p class="statement-note">The rule behind every Fernlight app.</p>
+            </div>
+            <div class="split-copy">
+              <h2 id="ai-title" class="h-section">Built with AI. Finished by hand.</h2>
+              <p class="serif">We’re open about how we work. AI is part of our toolkit from the first prototype to the final test, and it’s how an independent studio ships apps that stand alongside much larger teams. Judgement, taste and accountability stay with people.</p>
+              <ul class="nos">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M6 18L18 6"/></svg>No dark patterns</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M6 18L18 6"/></svg>No selling your data</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M6 18L18 6"/></svg>No unfinished features shipped</li>
+              </ul>
+            </div>
+          </div>
 
-    <!-- ===== Waitlist ===== -->
-    <section id="waitlist" class="cta" aria-labelledby="waitlist-title">
-      <div class="container">
-        <h2 id="waitlist-title" class="h-section">Be first to try Frond.</h2>
-        <p class="lede">Join the waitlist and we’ll email you when Frond is ready.</p>
-        <!-- Waitlist signups go to Buttondown. See README.md → "Waitlist form". -->
-        <form class="form" data-waitlist novalidate method="post" target="_blank" action="https://buttondown.com/api/emails/embed-subscribe/sanitydub">
-          <input type="hidden" name="embed" value="1">
-          <label class="visually-hidden" for="email">Email address</label>
-          <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
-          <button class="btn btn-ink" type="submit">Join the waitlist</button>
-        </form>
-        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        <p class="form-note">No spam. Just Frond and Fernlight news, and you can unsubscribe any time.</p>
-      </div>
-    </section>
+          <div class="process reveal">
+            <h3 class="h-sub">From problem to product.</h3>
+            <ol class="steps">
+              <li class="step">
+                <span class="step-num">01</span>
+                <h4>Find the problem</h4>
+                <p>Start with something people deal with every day.</p>
+                <span class="who">People</span>
+              </li>
+              <li class="step">
+                <span class="step-num">02</span>
+                <h4>Design it properly</h4>
+                <p>Prototype and refine until the experience feels obvious.</p>
+                <span class="who">People + AI</span>
+              </li>
+              <li class="step">
+                <span class="step-num">03</span>
+                <h4>Build and test</h4>
+                <p>AI speeds up the build. Every path is checked by hand.</p>
+                <span class="who">AI + People</span>
+              </li>
+              <li class="step">
+                <span class="step-num">04</span>
+                <h4>Ship and improve</h4>
+                <p>Launch when it’s ready, then listen and keep refining.</p>
+                <span class="who">People</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Founder note ===== -->
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container">
+          <figure class="quote reveal">
+            <h2 id="about-title" class="label">From the founder</h2>
+            <blockquote>
+              <p>“Too many apps feel like a compromise: polished but fragile, or useful but hard to use. Fernlight exists to build everyday apps that hold up against the best, and AI makes that possible for a studio our size.”</p>
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">SHS</span>
+              <span><strong>SHS</strong><span>Founder, Fernlight</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ===== Updates signup ===== -->
+      <section id="updates" class="section section-last" aria-labelledby="updates-title">
+        <div class="container">
+          <div class="night reveal">
+            <h2 id="updates-title" class="h-section">Follow along.</h2>
+            <p class="lede">Get an email when we ship something new: Inkwell updates and our next app. Nothing else in between.</p>
+            <!-- Signups go to Buttondown. See README.md → "Updates form". -->
+            <form class="form" data-signup novalidate method="post" target="_blank" action="https://buttondown.com/api/emails/embed-subscribe/sanitydub">
+              <input type="hidden" name="embed" value="1">
+              <label class="visually-hidden" for="email">Email address</label>
+              <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <button class="btn btn-fern" type="submit">Subscribe</button>
+            </form>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            <p class="form-note">No spam. Only Fernlight news. Unsubscribe any time.</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <div>
-          <a class="brand" href="#top">
-            <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><rect class="mk1" x="32" y="6" width="62" height="50" rx="14"/><rect class="mk2" x="19" y="25" width="62" height="50" rx="14"/><rect class="mk3" x="6" y="44" width="62" height="50" rx="14"/></svg>
-            Fernlight
-          </a>
-          <p class="footer-tag">A small, independent app studio. Made with care.</p>
-        </div>
+        <p class="footer-tag">An independent app studio building beautiful, dependable everyday apps, with AI and with care.</p>
         <div class="footer-cols">
           <nav class="footer-col" aria-labelledby="f-studio">
             <h2 id="f-studio">Studio</h2>
             <ul>
-              <li><a href="#make">What we make</a></li>
-              <li><a href="#how">How we work</a></li>
-              <li><a href="#note">About</a></li>
+              <li><a href="#apps">Apps</a></li>
+              <li><a href="#how">How we build</a></li>
+              <li><a href="#ai">Built with AI</a></li>
+              <li><a href="#about">About</a></li>
             </ul>
           </nav>
           <div class="footer-col">
             <h2>Contact</h2>
             <ul>
               <li><a href="mailto:hello@fernlightapps.com">hello@fernlightapps.com</a></li>
-              <li><a href="#waitlist">Join the waitlist</a></li>
+              <li><a href="#updates">Get updates</a></li>
+              <li><a href="https://github.com/sanitydub/inkwell">Inkwell on GitHub</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <p class="footer-bottom">© <span data-year>2026</span> Fernlight</p>
+      <p class="footer-mark" aria-hidden="true"><span class="wordmark">fernlight</span></p>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Fernlight</p>
+        <p>Designed and built with AI, finished by hand.</p>
+      </div>
     </div>
   </footer>
 </body>
